@@ -17,3 +17,52 @@ Use hint number    |HintNumber  |Post        |{idPlayer, PlayerPassword, numPlay
 Place card         |PlaceCard   |Post        |{idPlayer, PlayerPassword, numCard }|true if place card sucsess (place card with fall sucsess too)<br>false else|
 Drop card          |DropCard    |Post        |{idPlayer, PlayerPassword, numCard }|true if drop card sucsess<br>false else    |
 Get all info       |GetInfo     |Get         |idplayer, PlayerPassword            |see next                                   |
+
+ServerInfo
+
+Name        |Type    |Description                          |
+------------|--------|-------------------------------------|
+IdPlayer    |int     |id your player                       |
+IdTable     |int     |id your table if you joined to table<br>-1 else|
+NickById    |Dictionary<int, string>|Get nick by id. Work only for your and your timmets|
+Table       |TableInfo|Info about your table if you joined to table<br>null else|
+
+TableInfo
+
+Name        |Type    |Description                          |
+------------|--------|-------------------------------------|
+Players     |int[]   |List of id players, who joined to table|
+Seats       |int[]   |List of id players, who and where sit|
+GameStarted |bool    |true if game started<br>false else   |
+Game        |GameInfo|Info about your game if game started<br>null else|
+
+GameInfo
+
+Name        |Type    |Description                          |
+------------|--------|-------------------------------------|
+CurrentPlayer|int    |Number player, who turn now          |
+CountHints  |int     |Count of hints                       |
+CountFall   |int     |Count of fall                        |
+Result      |int     |Current result                       |
+GameIsEnd   |bool    |true if game is end<br>false else    |
+Table       |int[]   |Current result in every color        |
+CurrentGameType|int  |0 = FiveColor, 1 = RainbowIsNewColor, 2 = RainbowIsEvery|
+DropsCard   |ICard[] |List of drops card                   |
+Players     |PlayersInfo[]|List info about players         |
+
+PlayerInfo
+
+Name        |Type    |Description                          |
+------------|--------|-------------------------------------|
+Cards       |ICard[] |List of cards on hand                |
+
+ICard
+
+Name        |Type    |Description                          |
+------------|--------|-------------------------------------|
+Color       |int     |Color of card, if player see this<br>-1 else|
+Number      |int     |Number of card, if player see this<br>-1 else|
+KnowColor   |int     |What player know about color of this card|
+KnowNumber  |int     |What player know about number of this card|
+
+
