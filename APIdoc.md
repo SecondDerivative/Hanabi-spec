@@ -49,6 +49,7 @@ Table       |int[]   |Current result in every color        |
 CurrentGameType|int  |0 = FiveColor, 1 = RainbowIsNewColor, 2 = RainbowIsEvery|
 DropsCard   |ICard[] |List of drops card                   |
 Players     |PlayersInfo[]|List info about players         |
+Story       |Event[] |Story of current game
 
 PlayerInfo
 
@@ -64,5 +65,20 @@ Color       |int     |Color of card, if player see this<br>-1 else|
 Number      |int     |Number of card, if player see this<br>-1 else|
 KnowColor   |int     |What player know about color of this card|
 KnowNumber  |int     |What player know about number of this card|
+
+Event
+
+Name        |Type    |Description                          |
+------------|--------|-------------------------------------|
+Type        |int     |0 - HintColor<br>1 - HintNumber<br>2 - LayOK<br>3 - LayFall<br>4 - Drop|
+Color       |int     |Color of card, if place, fall or drop<br>Color used for hint, if color hint<br>-1 else|
+Number      |int     |Number of card, if place, fall or drop<br>Number used for hint, if number hint<br>-1 else|
+PlayerFrom  |int     |Num of player, who made turn         |
+PlayerTo  |int       |Num of player, who recive hint, if hint<br>-1 else|
+
+
+
+
+
 
 
