@@ -24,7 +24,7 @@ Name        |Type    |Description                          |
 ------------|--------|-------------------------------------|
 IdPlayer    |int     |id your player                       |
 IdTable     |int     |id your table if you joined to table<br>-1 else|
-NickById    |Dictionary<int, string>|Get nick by id. Work only for your and your timmets|
+NickById    |Dictionary<int, string>|Get nick by id. Work only for you and your timmets|
 Table       |TableInfo|Info about your table if you joined to table<br>null else|
 
 TableInfo
@@ -33,6 +33,7 @@ Name        |Type    |Description                          |
 ------------|--------|-------------------------------------|
 Players     |int[]   |List of id players, who joined to table|
 Seats       |int[]   |List of id players, who and where sit|
+IdAdmin     |int     |Id admin                             |
 GameStarted |bool    |true if game started<br>false else   |
 Game        |GameInfo|Info about your game if game started<br>null else|
 
