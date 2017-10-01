@@ -50,7 +50,8 @@ Table       |int[]   |Current result in every color        |
 CurrentGameType|int  |0 = FiveColor, 1 = RainbowIsNewColor, 2 = RainbowIsEvery|
 DropsCard   |ICard[] |List of drops card                   |
 Players     |PlayersInfo[]|List info about players         |
-Story       |Event[] |Story of current game
+Story       |Event[] |Story of current game                |
+CardsInDeck |int     |Count of cards in deck               |
 
 PlayerInfo
 
