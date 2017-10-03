@@ -36,6 +36,7 @@ Seats       |int[]   |List of id players, who and where sit|
 IdAdmin     |int     |Id admin                             |
 GameStarted |bool    |true if game started<br>false else   |
 Game        |GameInfo|Info about your game if game started<br>null else|
+CurrentGameType|int  |0 = FiveColor, 1 = RainbowIsNewColor, 2 = RainbowIsEvery|
 
 GameInfo
 
